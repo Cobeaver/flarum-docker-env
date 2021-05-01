@@ -2,9 +2,9 @@ version: "3.6"
 
 services:
   database:
-    image: mysql:5.7
+    image: ${DB_IMAGE}
     restart: always
-    container_name: site-db
+    container_name: ${DB_HOST}
     expose:
       - 3306
     environment:
@@ -90,7 +90,7 @@ services:
     container_name: site-pma
     restart: always
     environment: 
-      - PMA_HOST=site-db
+      - PMA_HOST=${DB_HOST} #site-db
     volumes:
       - pma-root:/var/www/html
 
