@@ -1,4 +1,4 @@
-FROM nginx:1.17-alpine
+FROM nginx:1.20-alpine
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
